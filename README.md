@@ -1,7 +1,7 @@
 # job-crawling
 
 ## used stacks
-Flask 
+Flask <br>
 python 
 requests 
 beautifulsoup4
