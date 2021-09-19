@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remote-job result in 3 websites</title>
+  </head>
+  <body>
+    <header><h1>{{result}}</h1>
+        <h2>searched counts:{{count}}</h2>
+    </header>
+    <main>
+    <ul>
+      {% for job in jobs %}
+      <li>
+        <span>{{job['title']}}</span>
+        <span>{{job['company']}}</span>
+        <span>{{job['apply']}}</span>
+      </li>
+      {% endfor %}
+    </ul>
+</main>
+  </body>
+</html>
