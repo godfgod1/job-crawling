@@ -2,6 +2,6 @@
 
 ## used stacks
 Flask <br>
-python 
-requests 
+python <br>
+requests <br>
 beautifulsoup4
