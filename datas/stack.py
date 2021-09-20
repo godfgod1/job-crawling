@@ -1,4 +1,4 @@
-# from common import call_html
+
 from bs4 import BeautifulSoup
 import requests
 
@@ -20,7 +20,7 @@ def get_jobs(url,pages):
         if page == 0:
             continue
         else:
-            print(f'scrapping page {page}')
+            print(f'scrapping page {page} in stack_overflow')
             page = f'{url}&r=true&pg={page}'
         
             req = requests.get(page)        
@@ -38,14 +38,14 @@ def get_jobs(url,pages):
     return jobs_info
             # for job in jobs:
 
-def export_jobs(word):
+def export_stack_jobs(word):
     SEARCH_URL = f'https://stackoverflow.com/jobs?r=true&q={word}'
     req = requests.get(SEARCH_URL)
     soup = BeautifulSoup(req.text,'html.parser')
     last_pages = load_last_pages(soup)
-    jobs = get_jobs(SEARCH_URL,last_pages)
+    get_stack_jobs = get_jobs(SEARCH_URL,last_pages)
     # print(jobs)
-    return  jobs
+    return  get_stack_jobs
 
 
 
