@@ -1,15 +1,18 @@
 from bs4 import BeautifulSoup
 import requests
 
-WEWORK_URL = 'https://weworkremotely.com/remote-jobs/search?term=python'
+
 
 def get_jobs(jobs):
+    WEWORK_URL = 'https://weworkremotely.com'
     # print(jobs[0].find_all('a')[1]['href'][1:])
     jobs_info =[]
     for job in jobs:
         title = job.find('span',{'class':'title'}).string
         company = job.find('span',{'class':'company'}).string
-        apply = job.find_all('a')[1]['href'][1:]
+        apply = job.find_all('a')[1]['href']
+        apply = WEWORK_URL + apply
+        # print(apply)
         jobs_info.append({'title':title,'company':company,'apply':apply})
         # print({'title':title,'company':company,'apply':apply})
     return jobs_info
@@ -38,4 +41,4 @@ def export_wework_jobs(word):
     # print(get_wework_jobs)
     return get_wework_jobs
 
-
+# export_wework_jobs('javascript')

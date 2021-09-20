@@ -1,6 +1,6 @@
 import requests
 from flask import Flask,render_template, request,redirect,send_file
-from  datas.stack import  export_jobs
+from  index import export_combine_jobs
 
 app = Flask('remote_job_searching')
 
@@ -11,7 +11,7 @@ def home():
 @app.route('/result')
 def result():
     result = request.args.get('job')
-    jobs = export_jobs(result)
+    jobs = export_combine_jobs(result)
     count = len(jobs)
     return render_template('result.html',result=result,jobs=jobs,count=count)
 

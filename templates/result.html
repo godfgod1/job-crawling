@@ -15,7 +15,8 @@
       <li>
         <span>{{job['title']}}</span>
         <span>{{job['company']}}</span>
-        <span>{{job['apply']}}</span>
+        <a href={{job['apply']}}>Apply</a>
+        <span></span>
       </li>
       {% endfor %}
     </ul>
