@@ -13,7 +13,7 @@ def get_jobs(jobs):
         apply = job.find_all('a')[1]['href']
         apply = WEWORK_URL + apply
         # print(apply)
-        jobs_info.append({'title':title,'company':company,'apply':apply})
+        jobs_info.append({'title':title,'company':company,'apply':apply,'from':'Wework-Remotely'})
         # print({'title':title,'company':company,'apply':apply})
     return jobs_info
 

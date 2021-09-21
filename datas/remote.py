@@ -13,7 +13,7 @@ def get_jobs(soup):
         company = li.find('h3').string
         apply = li.find('a',{'class':'preventLink'})['href']
         apply = REMOTE_URL+apply
-        jobs_info.append({'title':title,'company':company,'apply':apply})
+        jobs_info.append({'title':title,'company':company,'apply':apply,'from':'Remoteok'})
     return jobs_info
 
 

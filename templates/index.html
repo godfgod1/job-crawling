@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remote Job Searching</title>
+  
+  <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
   </head>
   <body>
+    <div id="wrapper">
+
     <header>
-      <h1>Remote job searching in 3 websites</h1>
-      <h3>
-          <h2>Used Websites </h2>
-          <a href="https://stackoverflow.com">stackoverflow</a>
-          <a href="https://weworkremotely.com">weworkremotely</a>
-          <a href="https://remoteok.io">remoteok</a>
-      </h3>
+      <h1> Searching for Remote job from 3 websites</h1>
+      <div class='info'>
+          <h2></h2>
+          <div class='links'>
+          <a href="https://stackoverflow.com">Stack-Overflow</a>
+          <a href="https://weworkremotely.com">Wework-Remotely</a>
+          <a href="https://remoteok.io">Remoteok</a>
+        </div>
+      </div>
     </header>
     <main>
       <form action="/result" method="get">
@@ -25,5 +32,10 @@
         <button>Search</button>
       </form>
     </main>
-  </body>
+  </div>
+ 
+      <div class="img">
+        
+      </div>
+ 
 </html>

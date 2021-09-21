@@ -31,7 +31,7 @@ def get_jobs(url,pages):
             company = job.find('h3').find('span').get_text(strip=True)
             apply = job.find('h2').find('a')['href']
             apply = STACK_URL+apply
-            job_info = {'title':title,'company':company,'apply':apply}
+            job_info = {'title':title,'company':company,'apply':apply,'from':'Stack-OverFlow'}
             jobs_info.append(job_info) 
         # print(jobs_info)
     return jobs_info

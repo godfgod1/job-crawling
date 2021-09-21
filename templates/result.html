@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>remote-job result in 3 websites</title>
+    <!-- <link rel="stylesheet" href="../static/error.css"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='result.css')}}">
   </head>
   <body>
-    <header><h1>{{result}}</h1>
-        <h2>searched counts:{{count}}</h2>
+    <header>
+      <h1>{{result}}</h1>
+        <h2>the number of jobs:{{count}}</h2>
+         <a href="/export?word={{result}}">Export to CSV</a>
+
     </header>
-    <main>
-    <ul>
+    <section>
+      <h4></h4>
+
+      <h4 class="title">Title</h4>
+      <h4>Company</h4>
+      <h4>From</h4>
+      <h4>Apply</h4>
       {% for job in jobs %}
-      <li>
-        <span>{{job['title']}}</span>
-        <span>{{job['company']}}</span>
-        <a href={{job['apply']}}>Apply</a>
-        <span></span>
-      </li>
+      <div class='space'></div>
+      <span >{{job['title']}}</span>
+      <span>{{job['company']}}</span>
+      <span>{{job['from']}}</span>
+      <a href={{job['apply']}}>Apply</a>
       {% endfor %}
-    </ul>
-</main>
+</section>
   </body>
 </html>
