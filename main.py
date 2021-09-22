@@ -4,6 +4,7 @@ from  index import export_combine_jobs
 from  datas.save import save_file
 
 app = Flask('remote_job_searching')
+app.run('')
 
 # server = app.server
 
@@ -52,5 +53,4 @@ def error():
     return render_template('error.html')
 
 
-app.run('')
 
