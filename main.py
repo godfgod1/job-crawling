@@ -3,7 +3,7 @@ from flask import Flask,render_template, request,redirect,send_file
 from  index import export_combine_jobs
 from  datas.save import save_file
 
-app = Flask('remote_job_searching')
+app = Flask(__name__)
 
 # server = app.server
 
@@ -51,7 +51,7 @@ def export_file():
 def error():
     return render_template('error.html')
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 app.run('')
 
 
