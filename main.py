@@ -6,8 +6,6 @@ import os
 
 app = Flask(__name__)
 
-# server = app.server
-
 db = {}
 @app.route('/')
 def home():
@@ -51,7 +49,6 @@ def export_file():
 @app.route('/error')
 def error():
     return render_template('error.html')
-
 
 if __name__ == "__main__":
   port = int(os.environ.get("PORT", 5000))
