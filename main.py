@@ -5,7 +5,7 @@ from  datas.save import save_file
 
 app = Flask('remote_job_searching')
 
-server = app.server
+# server = app.server
 
 db = {}
 @app.route('/')
@@ -51,6 +51,6 @@ def export_file():
 def error():
     return render_template('error.html')
 
-# app.run('')
+app.run('')
 
 
