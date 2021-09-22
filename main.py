@@ -2,6 +2,7 @@ import requests
 from flask import Flask,render_template, request,redirect,send_file
 from  index import export_combine_jobs
 from  datas.save import save_file
+import os
 
 app = Flask(__name__)
 
@@ -51,7 +52,8 @@ def export_file():
 def error():
     return render_template('error.html')
 
-if __name__ == "__main__":
-app.run('')
 
+if __name__ == "__main__":
+  port = int(os.environ.get("PORT", 5000)
+  app.run(host="0.0.0.0", port=port)
 
